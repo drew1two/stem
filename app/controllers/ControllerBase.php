@@ -24,17 +24,9 @@ class ControllerBase extends Controller
 			$uriParts = explode('/', $_SERVER['REQUEST_URI']);
 			$uri = $uriParts[2];
 		}
-		$this->view->setVar('linkDisplayName', $this->dashesToCamelCase($uri, true));
+		$this->view->setVar('linkActionUri', $uri);
+		
 	}
 
-	function dashesToCamelCase($string, $capitalizeFirstCharacter = false) 
-	{
-	    $str = ucwords(str_replace('-', ' ', $string));
-
-	    if (!$capitalizeFirstCharacter) {
-	        $str = lcfirst($str);
-	    }
-
-	    return $str;
-	}
+	
 }

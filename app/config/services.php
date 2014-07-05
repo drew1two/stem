@@ -48,6 +48,12 @@ $di->set('view', function() use ($config) {
 					'compiledSeparator' => '_',
 					"compileAlways" => true
 			));
+			
+			$compiler = $volt->getCompiler();
+			$compiler->addFunction('linkDisplay', function($resolvedArgs, $exprArgs)  use ($compiler) {
+				return "Stemcord\Utils\LinkUtil::displayFromDash(". $compiler->expression($exprArgs[0]['expr']) .")";
+			});
+
 			return $volt;
 		}
 	));

@@ -57,19 +57,13 @@ Memberi mereka pilihan pengobatan tambahan untuk mengobati penyakit di masa mend
  
 <!--========== Sidebar ==========-->
 <div class="page_right page_margin_top">
-	<div id="child-page-widget"><ul class="child-widget-list">
-		<li class="child-widget-list-item current"><div class="child-widget-list-arrow"></div><span>{{ linkDisplayName }}</span><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/layanan-kami') }}" title="Layanan Kami">Layanan Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/pendiri') }}" title="Pendiri">Pendiri</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/sejarah') }}" title="Sejarah">Sejarah</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/akreditasi') }}" title="Akreditasi">Akreditasi</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/fasilitas') }}" title="Fasilitas">Fasilitas</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/video-kami') }}" title="Video Kami">Video Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/karir') }}" title="Karir">Karir</a><div class="child-widget-list-separator"></div></li>
-	</ul></div><div class="separator-sidebar">&nbsp;</div>
+	
+{{ partial('partials/topsidebar') }}
 	
 <!--========== Home Boxes ==========-->
 {{ partial('partials/sidehomebar') }}
-<!--==============================--></div> <!-- page_right -->
+<!--==============================-->
+
+</div> <!-- page_right -->
 
 {{ partial('partials/footer') }}
