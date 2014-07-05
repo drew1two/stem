@@ -1,0 +1,18 @@
+# Application
+app/config/config.php
+app/cache/volt/*
+app/cache/metaData/*
+public/files/*
+vendor/*
+
+# Misc
+.idea
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+
