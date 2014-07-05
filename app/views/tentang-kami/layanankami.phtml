@@ -1,0 +1,65 @@
+{% include "partials/header.phtml" %}
+
+<!--==============================-->
+
+<div class="site_container narrow topborder"> <!-- remove narrow class for wide screen -->
+
+<div class="sc_page relative noborder">
+
+<!-- The Loop -->
+
+<!--========== Content ==========-->
+	<div class="page_layout page_margin_top clearfix">
+	
+	<div class="page_header clearfix">
+		<div class="page_header_left">
+			<!-- Breadcrumbs -->
+			<ul class="bread_crumb"><li><a href="{{ url() }}" title="Home">Home</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li><a href="{{ url('tentang-kami/tentang-stemcord') }}">Tentang Kami</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li>Layanan Kami</li></div>
+	</div>
+
+			<div class="page_left page_margin_top">
+		
+			 	
+					<h2 class="box_header">Layanan kami</h2>
+						<p><img width="630" height="330" src="{{ url('img/stemcord-our_services.jpg') }}" class="attachment-post-thumbnail wp-post-image" alt="Layanan {{ companyName }}" /></p>
+						<p>StemCord adalah bank darah tali pusat yang paling kokoh di Singapura, yang secara khusus menangani Pengumpulan darah tali pusat, Pemrosesan, Penyimpanan dan Pengeluaran (release).</p>
+
+<p>Sementara Laboratorium StemCord berada di Singapura, kami memiliki kantor perwakilan di negara - negara berkembang, kami melayani pengambilan darah tali pusat di negara kawasan Asia Pasifik lainnya, dengan syarat dan ketentuan berlaku.</p>
+
+<p>Kami percaya bahwa sel punca akan sangat berguna di masa mendatang, dan perusahaan ini kuat secara financial dan tetap eksis di masa depan.</p>
+
+<p>Untuk melindungi kepentingan klien, kami tidak ikut dalam kegiatan penelitian dan pengembangan yang beresiko secara financial, demi melindungi integritas dan keutuhan perusahaan ini.</p>
+
+<p>Sebagai bagian dari komitmen kami untuk menyelamatkan kehidupan, kami menyediakan jasa pengambilan dan pengiriman sel punca untuk tujuan transplantasi di Singapura, tanpa biaya apapun. </p>
+
+<p>Dengan memilih Kami sebagai bank darah tali pusat anak Anda akan memberikan ketenangan pikiran karena kami akan selalu hadir di setiap langkah Anda, sampai ke masa depan.</p>
+
+<p>Untuk informasi lebih lanjut, hubungi kami di <a href="tel:{{ phoneCall }}"><span class="lightblue">{{ phoneSimple }}</span></a>.</p>
+
+<span class="darkblue"><i>Providing you with Security, Experience, Expertise &amp; Quality.</i></span>									
+					
+		
+		</div> <!-- page_left -->
+
+<!-- End The Loop -->
+
+<!--==============================-->
+ 
+<!--========== Sidebar ==========-->
+<div class="page_right page_margin_top">
+	<div id="child-page-widget"><ul class="child-widget-list">
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/tentang-stemcord/" title="Tentang Kami">Tentang Kami</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item current"><div class="child-widget-list-arrow"></div><span>Layanan Kami</span><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/pendiri/" title="Pendiri">Pendiri</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/sejarah/" title="Sejarah">Sejarah</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/akreditasi/" title="Akreditasi">Akreditasi</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/fasilitas/" title="Fasilitas">Fasilitas</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/video-kami/" title="Video Kami">Video Kami</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/karir/" title="Karir">Karir</a><div class="child-widget-list-separator"></div></li>
+	</ul></div><div class="separator-sidebar">&nbsp;</div>
+	
+<!--========== Home Boxes ==========-->
+{% include "partials/sidehomebar.phtml" %}
+<!--==============================--></div> <!-- page_right -->
+
+{% include "partials/footer.phtml" %}

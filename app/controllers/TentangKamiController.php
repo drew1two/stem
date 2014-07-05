@@ -19,6 +19,11 @@ class TentangKamiController extends ControllerBase
     {
     	
     }
+
+    public function layananKamiAction()
+    {
+    	
+    }
     
 }
 
