@@ -13,7 +13,7 @@
 	<div class="page_header clearfix">
 		<div class="page_header_left">
 			<!-- Breadcrumbs -->
-			<ul class="bread_crumb"><li><a href="http://www.stemcord.com" title="Home">Home</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li><a href="http://www.stemcord.com/about-us/">About Us</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li>About StemCord</li>		</div>
+			<ul class="bread_crumb"><li><a href="{{ url() }}" title="Home">Home</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li><a href="{{ url('tentang-kami/tentang-stemcord') }}">Tentang Kami</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li>Tentang Stemcord</li></div>
 	</div>
 
 			<div class="page_left page_margin_top">
@@ -39,7 +39,7 @@ Memberi mereka pilihan pengobatan tambahan untuk mengobati penyakit di masa mend
 <p>StemCord adalah Bank Darah Tali Pusat Swasta yang pertama kali mendapatkan izin dari Departemen Kesehatan Singapura. Sejak hari pertama beroperasi, 6 Maret 2002, StemCord membantu masyarakat mengetahui lebih lanjut mengenai sel punca dan memberikan kesempatan untuk melakukan asuransi biologis yang berguna bagi generasi selanjutnya.</p>
 
 <h3 class="page_margin_top">Standar Kualitas Kontrol yang Tertinggi</h3>
-<p>StemCord terus menjaga lebih dari 25,000 sampel darah tali pusat  dengan stAndar kualitas kontrol tertinggi. StemCord adalah bank darah tali pusat pertama di Asia Tenggara dan satu-satunya di Singapura yang mendapat Akreditasi <a href="/stemcord/fact-netcord-accreditation" target="_blank" alt="FACT-NetCord Accreditation">FACT-NetCord</a> (Foundation for the Accreditation of Cellular Therapy and NetCord).</p>
+<p>StemCord terus menjaga lebih dari 25,000 sampel darah tali pusat  dengan stAndar kualitas kontrol tertinggi. StemCord adalah bank darah tali pusat pertama di Asia Tenggara dan satu-satunya di Singapura yang mendapat Akreditasi <a href="{{ url('perbedaan-stemcord/fact-netcord-accreditation') }}" target="_blank" alt="FACT-NetCord Accreditation">FACT-NetCord</a> (Foundation for the Accreditation of Cellular Therapy and NetCord).</p>
 
 <p>FACT-NetCord adalah suatu Badan Akreditasi International yang paling bergengsi yang secara khusus menangani Bank Darah Tali Pusat untuk Pengumpulan darah tali pusat, Pemrosesan, Pengujian, Penyimpanan, Seleksi dan Pengeluaran (release)</p>
 
@@ -58,18 +58,18 @@ Memberi mereka pilihan pengobatan tambahan untuk mengobati penyakit di masa mend
 <!--========== Sidebar ==========-->
 <div class="page_right page_margin_top">
 	<div id="child-page-widget"><ul class="child-widget-list">
-		<li class="child-widget-list-item current"><div class="child-widget-list-arrow"></div><span>Tentang StemCord</span><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/layanan-kami/" title="Layanan Kami">Layanan Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/pendiri/" title="Pendiri">Pendiri</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/sejarah/" title="Sejarah">Sejarah</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/akreditasi/" title="Akreditasi">Akreditasi</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/fasilitas/" title="Fasilitas">Fasilitas</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/video-kami/" title="Video Kami">Video Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/karir/" title="Karir">Karir</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item current"><div class="child-widget-list-arrow"></div><span>{{ linkDisplayName }}</span><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/layanan-kami') }}" title="Layanan Kami">Layanan Kami</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/pendiri') }}" title="Pendiri">Pendiri</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/sejarah') }}" title="Sejarah">Sejarah</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/akreditasi') }}" title="Akreditasi">Akreditasi</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/fasilitas') }}" title="Fasilitas">Fasilitas</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/video-kami') }}" title="Video Kami">Video Kami</a><div class="child-widget-list-separator"></div></li>
+		<li class="child-widget-list-item"><a href="{{ url('tentang-kami/karir') }}" title="Karir">Karir</a><div class="child-widget-list-separator"></div></li>
 	</ul></div><div class="separator-sidebar">&nbsp;</div>
 	
 <!--========== Home Boxes ==========-->
-{% include "partials/sidehomebar.phtml" %}
+{{ partial('partials/sidehomebar') }}
 <!--==============================--></div> <!-- page_right -->
 
-{% include "partials/footer.phtml" %}
+{{ partial('partials/footer') }}
