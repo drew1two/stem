@@ -16,8 +16,7 @@ class TentangKamiController extends ControllerBase
 
     public function tentangStemcordAction()
     {
-    	$this->view->pick('tentangkami/tentangstemcord');
-    	echo 'test';
+    	
     }
     
 }
