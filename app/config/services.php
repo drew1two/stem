@@ -43,13 +43,9 @@ $di->set('view', function() use ($config) {
 		'.phtml' => function($view, $di) use ($config) {
 
 			$volt = new VoltEngine($view, $di);
-/*
 			$volt->setOptions(array(
-				'compiledPath' => $config->application->cacheDir . 'volt/',
-				'compiledSeparator' => '_'
-			));
-*/
-			$volt->setOptions(array(
+					'compiledPath' => $config->application->cacheDir . 'volt/',
+					'compiledSeparator' => '_',
 					"compileAlways" => true
 			));
 			return $volt;
