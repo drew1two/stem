@@ -12,5 +12,8 @@ use Phalcon\Mvc\Controller,
  */
 class ControllerBase extends Controller
 {
-	
+	protected function initialize()
+	{
+		$this->view->setVar('phoneSimple', '021-520-6555/6');
+	}
 }
