@@ -30,6 +30,7 @@ class ControllerBase extends Controller
 		}
 		$this->view->setVar('linkActionUri', $uri);
 		$this->view->setVar('title', $title);
+		$this->view->setVar('metaDescription', '');
 	}
 
 	
