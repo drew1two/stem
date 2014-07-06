@@ -17,15 +17,19 @@ class ControllerBase extends Controller
 		$this->view->setVar('phoneSimple', '021-520-6555/6');
 		$this->view->setVar('faxSimple', '021-520-6551');
 		$this->view->setVar('phoneCall', '+62215206555');
-		$this->view->setVar('companyName', 'Stemcord Indonesia');
+		$this->view->setVar('companyName', 'StemCord Indonesia');
 
-		$uri = '/';
+		$uri = '';
+		$title = 'Bank Darah Tali Pusat';
 		if (!empty($_SERVER['REQUEST_URI'])) {
 			$uriParts = explode('/', $_SERVER['REQUEST_URI']);
-			$uri = $uriParts[2];
+			if (count($uriParts) == 3) {
+				$uri = $uriParts[2];
+				$title = \Stemcord\Utils\LinkUtil::displayFromDash($uri);
+			}
 		}
 		$this->view->setVar('linkActionUri', $uri);
-		
+		$this->view->setVar('title', $title);
 	}
 
 	
