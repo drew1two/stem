@@ -3435,10 +3435,10 @@ float: left;
 margin: 4px 0 0 5px;
 }
 .social-youtube {
-background: url(images/stemcord_youtube.png) no-repeat center;
+background: url(images/icon-social-media.png) 0 -60px;
 }
 .social-facebook {
-background: url(images/stemcord_facebook.png) no-repeat center;
+background: url(images/icon-social-media.png) 0 0px;
 }
 #searchform {
 float: left;
@@ -3459,7 +3459,7 @@ color: #909090;
 border: 1px solid #d0d0d0;
 }
 .searchbtn {
-background: url(images/searchbtn.png) no-repeat center;
+background: url(images/icon-social-media.png) 0 -30px;
 width: 28px;
 height: 28px;
 border: 0;
@@ -3469,7 +3469,7 @@ cursor: pointer;
 margin-top: 15px;
 }
 #stemcord-hotline-title {
-background: url(images/stemcord_hotline.png) no-repeat left;
+background: url(images/icon-social-media.png) 0 -90px no-repeat;
 color: #555;
 font-size: 110%;
 padding: 7px 0 0 26px;
