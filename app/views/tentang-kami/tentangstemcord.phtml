@@ -1,25 +1,5 @@
-{% include "partials/header.phtml" %}
-
-<!--==============================-->
-<div class="site_container narrow topborder"> <!-- remove narrow class for wide screen -->
-
-<div class="sc_page relative noborder">
-
-<!-- The Loop -->
-
-<!--========== Content ==========-->
-	<div class="page_layout page_margin_top clearfix">
-	
-	<div class="page_header clearfix">
-		<div class="page_header_left">
-			<!-- Breadcrumbs -->
-			{{ partial('partials/breadcrumbs') }}
-		</div>
-	</div>
-
-			<div class="page_left page_margin_top">
-		
-			 	
+{% extends "layouts/template.phtml" %}
+{% block content %}
 					<h2 class="box_header">Tentang StemCord</h2>
 						<div class="video-container"><iframe width="640" height="360" src="//www.youtube.com/embed/66mh2OQXcNU?feature=player_embedded" frameborder="0" allowfullscreen></iframe></div>
 <p>StemCord <a href="/about-us/our-founders" target="_blank" alt="Our Founders">didirikan dan dikelola oleh para Ahli Medis terkemuka</a> dengan tujuan memberi harapan akan masa depan. Sejak awal, StemCord terus menjaga konsistensi visi dan misi yaitu:
@@ -48,23 +28,4 @@ Memberi mereka pilihan pengobatan tambahan untuk mengobati penyakit di masa mend
 <p>Dalam tahun pertama beroperasi, StemCord mengumpulkan 800 sampel  darah tali pusat. Dan saat ini, lebih dari 25,000 sampel darah tali pusat telah disimpan di laboratorium penyimpanan kami. StemCord berdiri sebagai bank darah tali pusat swasta paling kokoh dan terbesar di Singapura.</p>
 
 <p>StemCord berpusat di Singapura dengan kantor-kantor cabang di Brunei, Indonesia, Filipina dan Vietnam. Dengan memilih StemCord sebagai bank penyimpanan darah tali pusat, Anda yakin telah memilih partner terpercaya yang menerapkan stAndar tertinggi terhadap kualitas kontrol dalam menjaga viabilitas sel yang Anda percayakan kepada kami. </p>									
-					
-		
-		</div> <!-- page_left -->
-
-<!-- End The Loop -->
-
-<!--==============================-->
- 
-<!--========== Sidebar ==========-->
-<div class="page_right page_margin_top">
-	
-{{ partial('partials/topsidebar') }}
-	
-<!--========== Home Boxes ==========-->
-{{ partial('partials/sidehomebar') }}
-<!--==============================-->
-
-</div> <!-- page_right -->
-
-{{ partial('partials/footer') }}
+{% endblock %}

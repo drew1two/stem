@@ -36,6 +36,31 @@ class TentangKamiController extends ControllerBase
     {
     	$this->view->setVar('metaDescription', 'StemCord Indonesia memberikan layanan yang lengkap untuk membantu Anda menyimpan, memproses dan menggunakan darah tali pusat Anda');
     }
+
+    public function pendiriAction()
+    {
+
+    }
+
+    public function sejarahAction()
+    {
+
+    }
+
+    public function akreditasiAction()
+    {
+
+    }
+
+    public function fasilitasAction()
+    {
+
+    }
+
+    public function videoKamiAction()
+    {
+    	
+    }
     
 }
 

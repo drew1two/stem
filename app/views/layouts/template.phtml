@@ -1,0 +1,43 @@
+{{ partial('partials/header') }}
+
+<!--==============================-->
+<div class="site_container narrow topborder"> <!-- remove narrow class for wide screen -->
+
+<div class="sc_page relative noborder">
+
+<!-- The Loop -->
+
+<!--========== Content ==========-->
+	<div class="page_layout page_margin_top clearfix">
+	
+	<div class="page_header clearfix">
+		<div class="page_header_left">
+			<!-- Breadcrumbs -->
+			{{ partial('partials/breadcrumbs') }}
+		</div>
+	</div>
+
+			<div class="page_left page_margin_top">
+		
+			 	
+					{% block content %}{% endblock %}								
+					
+		
+		</div> <!-- page_left -->
+
+<!-- End The Loop -->
+
+<!--==============================-->
+ 
+<!--========== Sidebar ==========-->
+<div class="page_right page_margin_top">
+	
+{{ partial('partials/topsidebar') }}
+	
+<!--========== Home Boxes ==========-->
+{{ partial('partials/sidehomebar') }}
+<!--==============================-->
+
+</div> <!-- page_right -->
+
+{{ partial('partials/footer') }}

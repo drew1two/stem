@@ -2531,24 +2531,24 @@ border: 1px solid #234396;
 }
 .controls .open_details
 {
-	background-image: url('/wp-content/themes/stemcord/images/media_icon_details.png');
+	background-image: url('images/media_icon_details.png');
 	margin-left: 0;
 }
 .controls .open_lightbox
 {
-	background-image: url('/wp-content/themes/stemcord/images/media_icon_image.png');
+	background-image: url('images/media_icon_image.png');
 }
 .controls .open_video_lightbox
 {
-	background-image: url('/wp-content/themes/stemcord/images/media_icon_video.png');
+	background-image: url('images/media_icon_video.png');
 }
 .controls .open_iframe_lightbox
 {
-	background-image: url('/wp-content/themes/stemcord/images/media_icon_url.png');
+	background-image: url('images/media_icon_url.png');
 }
 .controls .close
 {
-	background-image: url('/wp-content/themes/stemcord/images/close_icon.png');
+	background-image: url('images/close_icon.png');
 }
 .slider_navigation .more
 {

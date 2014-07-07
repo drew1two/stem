@@ -1,25 +1,5 @@
-{% include "partials/header.phtml" %}
-
-<!--==============================-->
-
-<div class="site_container narrow topborder"> <!-- remove narrow class for wide screen -->
-
-<div class="sc_page relative noborder">
-
-<!-- The Loop -->
-
-<!--========== Content ==========-->
-	<div class="page_layout page_margin_top clearfix">
-	
-	<div class="page_header clearfix">
-		<div class="page_header_left">
-			<!-- Breadcrumbs -->
-			<ul class="bread_crumb"><li><a href="{{ url() }}" title="Home">Home</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li><a href="{{ url('tentang-kami/tentang-stemcord') }}">Tentang Kami</a></li><li class="separator icon_small_arrow right_gray">&nbsp;</li><li>Layanan Kami</li></div>
-	</div>
-
-			<div class="page_left page_margin_top">
-		
-			 	
+{% extends "layouts/template.phtml" %}
+{% block content %}
 					<h2 class="box_header">Layanan kami</h2>
 						<p><img width="630" height="330" src="{{ url('img/stemcord-our_services.jpg') }}" class="attachment-post-thumbnail wp-post-image" alt="Layanan {{ companyName }}" /></p>
 						<p>StemCord adalah bank darah tali pusat yang paling kokoh di Singapura, yang secara khusus menangani Pengumpulan darah tali pusat, Pemrosesan, Penyimpanan dan Pengeluaran (release).</p>
@@ -38,28 +18,4 @@
 
 <span class="darkblue"><i>Providing you with Security, Experience, Expertise &amp; Quality.</i></span>									
 					
-		
-		</div> <!-- page_left -->
-
-<!-- End The Loop -->
-
-<!--==============================-->
- 
-<!--========== Sidebar ==========-->
-<div class="page_right page_margin_top">
-	<div id="child-page-widget"><ul class="child-widget-list">
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/tentang-stemcord/" title="Tentang Kami">Tentang Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item current"><div class="child-widget-list-arrow"></div><span>Layanan Kami</span><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/pendiri/" title="Pendiri">Pendiri</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/sejarah/" title="Sejarah">Sejarah</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/akreditasi/" title="Akreditasi">Akreditasi</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/fasilitas/" title="Fasilitas">Fasilitas</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/video-kami/" title="Video Kami">Video Kami</a><div class="child-widget-list-separator"></div></li>
-		<li class="child-widget-list-item"><a href="http://stemcord.co/tentang-kami/karir/" title="Karir">Karir</a><div class="child-widget-list-separator"></div></li>
-	</ul></div><div class="separator-sidebar">&nbsp;</div>
-	
-<!--========== Home Boxes ==========-->
-{% include "partials/sidehomebar.phtml" %}
-<!--==============================--></div> <!-- page_right -->
-
-{% include "partials/footer.phtml" %}
+{% endblock %}

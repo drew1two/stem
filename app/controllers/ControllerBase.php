@@ -23,7 +23,7 @@ class ControllerBase extends Controller
 		$title = 'Bank Darah Tali Pusat';
 		if (!empty($_SERVER['REQUEST_URI'])) {
 			$uriParts = explode('/', $_SERVER['REQUEST_URI']);
-			if (count($uriParts) == 3) {
+			if (count($uriParts) >= 3) {
 				$uri = $uriParts[2];
 				$title = \Stemcord\Utils\LinkUtil::displayFromDash($uri);
 			}
