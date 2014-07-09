@@ -39,7 +39,7 @@ class TentangKamiController extends ControllerBase
 
     public function pendiriAction()
     {
-
+    	$this->view->setVar('putJavascriptAtTop', 'true');
     }
 
     public function sejarahAction()
@@ -59,7 +59,7 @@ class TentangKamiController extends ControllerBase
 
     public function videoKamiAction()
     {
-    	
+
     }
     
 }

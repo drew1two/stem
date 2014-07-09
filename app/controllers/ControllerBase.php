@@ -18,6 +18,7 @@ class ControllerBase extends Controller
 		$this->view->setVar('faxSimple', '021-520-6551');
 		$this->view->setVar('phoneCall', '+62215206555');
 		$this->view->setVar('companyName', 'StemCord Indonesia');
+		$this->view->setVar('putJavascriptAtTop', 'false');
 
 		$uri = '';
 		$title = 'Bank Darah Tali Pusat';
