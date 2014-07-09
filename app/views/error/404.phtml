@@ -1,14 +1,11 @@
-<div>
-<strong>ERROR 404</strong>
-<br />
-<br />
-You have tried to access a page which does not exist or has been moved.
-<br />
-<br />
-Please click the links at the top navigation bar to 
-navigate to other parts of the site, or
-if you wish to contact us, there is information in the About page.
-<br />
-<br />
-[ERROR]
-</div>
+{% extends "layouts/template.phtml" %}
+{% block breadcrumbs %}
+<h1 class="page_title">Page Not Found</h1>
+{% endblock %}
+{% block content %}
+<h1 class="not_found page_margin_top_section">404</h1>
+<h1 class="page_margin_top_section">Error 404</h1>
+<p style="font-size: 14px; padding: 0;" class="page_margin_top">Looks like the page you are looking for does not exist.<br />
+If you came here from a bookmark, please remember to update your bookmark</p>
+<a title="Go Back To Homepage" href="{{ url() }}" class="more blue medium page_margin_top_section">Go Back To Homepage</a>
+{% endblock %}

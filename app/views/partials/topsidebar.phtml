@@ -1,5 +1,6 @@
 <div id="child-page-widget">
 	<ul class="child-widget-list">
+		{% if subMenus is defined %}
 		{% for subMenu in subMenus %}
 			{% set displayLink = linkDisplay(subMenu) %}
 			{% if subMenu == linkActionUri %}
@@ -8,6 +9,7 @@
 				<li class="child-widget-list-item"><a href="{{ url(menu ~ '/' ~ subMenu) }}" title="{{ displayLink }}">{{ displayLink }}</a><div class="child-widget-list-separator"></div></li>
 			{% endif %}
 		{% endfor %}
+		{% endif %}
 	</ul>
 </div>
 <div class="separator-sidebar">&nbsp;</div>

@@ -13,7 +13,7 @@
 	<div class="page_header clearfix">
 		<div class="page_header_left">
 			<!-- Breadcrumbs -->
-			{{ partial('partials/breadcrumbs') }}
+			{% block breadcrumbs %}{{ partial('partials/breadcrumbs') }}{% endblock %}
 		</div>
 	</div>
 
