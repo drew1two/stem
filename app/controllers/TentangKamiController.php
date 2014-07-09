@@ -18,7 +18,6 @@ class TentangKamiController extends ControllerBase
 			'akreditasi',
 			'fasilitas',
 			'video-kami',
-			'karir',
 		);
 	}
 
