@@ -21,11 +21,6 @@ class TentangKamiController extends ControllerBase
 			'karir',
 		);
 	}
-	
-	public function indexAction()
-	{
-
-	}
 
     public function tentangStemcordAction()
     {
@@ -44,7 +39,7 @@ class TentangKamiController extends ControllerBase
 
     public function sejarahAction()
     {
-
+    	$this->view->setVar('putJavascriptAtTop', 'true');
     }
 
     public function akreditasiAction()
