@@ -54,7 +54,7 @@ class TentangKamiController extends ControllerBase
 
     public function videoKamiAction()
     {
-
+    	$this->view->setVar('putJavascriptAtTop', 'true');
     }
     
 }
