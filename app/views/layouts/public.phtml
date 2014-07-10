@@ -4,10 +4,10 @@
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
-element.src = "js/jquery-1.8.3.min.js";
+element.src = "{{ url('js/jquery-1.8.3.min.js') }}";
 document.body.appendChild(element);
 var element2 = document.createElement("script");
-element2.src = "js/jquery-ui-1.9.2.custom.min.js";
+element2.src = "{{ url('js/jquery-ui-1.9.2.custom.min.js') }}";
 document.body.appendChild(element2);
 }
 if (window.addEventListener)

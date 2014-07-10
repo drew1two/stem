@@ -14,6 +14,7 @@ class ControllerBase extends Controller
 {
 	protected function initialize()
 	{
+
 		$this->view->setVar('phoneSimple', '021-520-6555/6');
 		$this->view->setVar('faxSimple', '021-520-6551');
 		$this->view->setVar('phoneCall', '+62215206555');
@@ -22,12 +23,16 @@ class ControllerBase extends Controller
 
 		$uri = '';
 		$title = 'Bank Darah Tali Pusat';
-		if (!empty($_SERVER['REQUEST_URI'])) {
-			$uriParts = explode('/', $_SERVER['REQUEST_URI']);
-			if (count($uriParts) >= 3) {
-				$uri = $uriParts[2];
-				$title = \Stemcord\Utils\LinkUtil::displayFromDash($uri);
+		if ($controller = $this->dispatcher->getControllerName() != 'error') {
+			if (!empty($_SERVER['REQUEST_URI'])) {
+				$uriParts = explode('/', $_SERVER['REQUEST_URI']);
+				if (count($uriParts) >= 3) {
+					$uri = $uriParts[2];
+					$title = \Stemcord\Utils\LinkUtil::displayFromDash($uri);
+				}
 			}
+		} else {
+			$title = '';
 		}
 		$this->view->setVar('linkActionUri', $uri);
 		$this->view->setVar('title', $title);

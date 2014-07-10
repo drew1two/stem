@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>{{ companyName }} | {{ title }}</title>
+		<title>{{ companyName }} {% if title != '' %}| {{ title }}{% endif %}</title>
 		<meta name="keywords" content="{{ companyName }}, bank darah tali pusat, cord blood banking indonesia" />
 		<meta name="description" content="{{ metaDescription }}" />
 		<meta name="robots" content="all" />
