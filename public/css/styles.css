@@ -3971,6 +3971,11 @@ font-size: 80%;
 margin-top: 50px;
 font-style: italic;
 }
+.submit-consent {
+font-size: 15px;
+line-height: 160%;
+margin-top: 20px;
+}
 .note {
 line-height: 100%;
 font-size: 90%;
