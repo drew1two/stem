@@ -1,31 +1,31 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
 <h2 class="box_header">Permohonan Informasi Kit</h2>
-						<ul class="gallery_item_details_list clearfix">
+{% if isSubmit %}
+						<ul>
 
-	<li id="gallery-details-1" class="gallery_item_details clearfix"><div class="columns no_width"><div class="column_left"><div class="details_box">
+	<li id="gallery-details-1" class="gallery_item_details"><div class="columns no_width"><div class="column_left"><div class="details_box">
 
 
 <br />
-<p>Your form was submitted successfully.</p>
-<p>Thank you for your interest in our information kit. Our representative will be contacting you shortly. Please do not hesitate to contact us at (65) 6471 2002 should you require further assistance.</p>
+<p>Permintaan information kit sudah diterima.</p>
+<p>Terima kasih telah mengirimkan permintaan informasi ini. Staff kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan hubungi {{ phoneFullTag }}.</p>
 <br />
-<p>Thank you and have a pleasant day ahead.</p>
+<p>Terima kasih</p>
 <br />
-<p>Warmest Regards,<br />
-StemCord Singapore</p>
+<p>Salam,<br />
+StemCord Indonesia</p>
 		
-	<ul class="controls page_margin_top"><li><a href="#gallery-details-close">Return to Previous Page</a></li></ul></div></div></div></li>
-	
+	<ul class="controls page_margin_top"><li><a href="{{ url('harga-pendaftaran/permintaan-information-kit') }}">Return to Previous Page</a></li></ul></div></div></div></li>
 </ul>
-
+{% else %}
 <div class="gallery-hide">
 
 <p>Untuk mengetahui lebih lanjut tentang  penyimpanan darah tali pusat dan manfaatnya saat ini. Mohon mengisi formulir di bawah ini untuk permohonan  kit informasi StemCord  yang akan dikirim ke email Anda secara gratis. Jika Anda memilih untuk memiliki kit informasi yang dikirimkan ke alamat tempat tinggal Anda sebagai gantinya, silakan mengisi pada  bagian bawah ini.</p>
 
 <div class="wpcf7" id="wpcf7-f402-p403-o1">
 <div class="screen-reader-response"></div>
-<form action="/pricing-and-enrolment/request-for-stemcords-information-kit/#wpcf7-f402-p403-o1" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
+<form action="{{ url('harga-pendaftaran/permintaan-information-kit') }}" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="402" />
 <input type="hidden" name="_wpcf7_version" value="3.8.1" />
@@ -155,5 +155,6 @@ Saya menyukai untuk dihubungi via:
 <p><input type="submit" value="Kirim" class="wpcf7-form-control wpcf7-submit more blue" /></p>
 </div><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
 
-</div>									
+</div>
+{% endif %}									
 {% endblock %}

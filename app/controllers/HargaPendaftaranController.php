@@ -29,7 +29,20 @@ class HargaPendaftaranController extends ControllerBase
 
     public function permintaanInformationKitAction()
     {
-    	
+    	$this->view->isSubmit = false;
+        if ($this->request->isPost()) {
+
+            $this->getDI()->getMail()->send(
+                array('jimmycdinata@gmail.com' => 'YOU'),
+                "Please confirm your email",
+                'test',
+                array(
+                    'confirmUrl' => '/confirm/' . '123' . '/' . 'pakde@email.com'
+                )
+            );
+
+            $this->view->isSubmit = true;
+        }
     }
 }
 

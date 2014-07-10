@@ -11,6 +11,8 @@ use Phalcon\DI\FactoryDefault,
 	Phalcon\Assets\Manager as Assets,
 	Phalcon\Flash\Direct as Flash;
 
+use Stemcord\Mail\Mail;
+
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
  */
@@ -166,4 +168,8 @@ $di->set('modelsManager', function() {
 
 $di->set('assets', function () {
 	return new Assets();
+});
+
+$di->set('mail', function() {
+	return new Mail();
 });
