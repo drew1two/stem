@@ -1608,7 +1608,7 @@ border-radius: 10px;
 	width: 520px;
 	height: auto;
 	min-height: 15px;
-	background: url('/wp-content/themes/stemcord/images/preloader.gif') no-repeat center center;
+	background: url('images/preloader.gif') no-repeat center center;
 }
 .post_content .gallery_box
 {
@@ -2627,7 +2627,7 @@ border: 1px solid #234396;
 	display: block;
 	width: 225px;
 	height: 150px;
-	background: url('/wp-content/themes/stemcord/images/preloader.gif') no-repeat center center;
+	background: url('images/preloader.gif') no-repeat center center;
 }
 .gallery_2_columns .gallery_box img
 {
@@ -2781,7 +2781,7 @@ ul.gallery_item_details_list
 	display: block;
 	width: 480px;
 	height: auto;
-	background: url('/wp-content/themes/stemcord/images/preloader.gif') no-repeat center center;
+	background: url('images/preloader.gif') no-repeat center center;
 }
 .gallery_item_details_list .gallery_box .slider_navigation,
 .post_content .gallery_box .slider_navigation
