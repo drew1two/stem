@@ -12,6 +12,12 @@ try {
 	$config = include __DIR__ . "/../app/config/config.php";
 
 	/**
+	 * Read composer 
+	 *
+	*/
+	require_once __DIR__ . '/../vendor/autoload.php';
+
+	/**
 	 * Read auto-loader
 	 */
 	include __DIR__ . "/../app/config/loader.php";

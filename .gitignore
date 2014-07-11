@@ -3,8 +3,10 @@ app/config/config.php
 app/cache/volt/*
 app/cache/metaData/*
 public/files/*
+vendor/*
 
 # Misc
+composer.phar
 .idea
 Thumbs.db
 Desktop.ini
