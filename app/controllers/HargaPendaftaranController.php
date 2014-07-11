@@ -34,8 +34,26 @@ class HargaPendaftaranController extends ControllerBase
     {
     	$this->view->isSubmit = false;
         if ($this->request->isPost()) {
-            $template = $this->getTemplate('test', array(
-                'confirmUrl' => '/confirm/' . '123' . '/' . 'someemailhere'
+            $name = strtoupper($this->request->getPost('kit-req-name', 'striptags'));
+
+            $this->view->name = $name;
+
+            $template = $this->getTemplate('permintaan-information-kit', array(
+                'confirmUrl'    => '/confirm/' . '123' . '/' . 'someemailhere',
+                'name'          => $name,
+                'email'         => strtolower($this->request->getPost('kit-req-email', 'striptags')),
+                'phone'              => strtoupper($this->request->getPost('kit-req-contact-num', 'striptags')),
+                'timeToPhone'              => strtoupper($this->request->getPost('kit-req-best-time-to-call', 'striptags')),
+                'address'              => strtoupper($this->request->getPost('kit-req-mail-address', 'striptags')),
+                'country'              => strtoupper($this->request->getPost('kit-req-country', 'striptags')),
+                'postalCode'              => strtoupper($this->request->getPost('kit-req-postalcode', 'striptags')),
+                'birthDate'              => strtoupper($this->request->getPost('kit-req-expected-date-of-delivery', 'striptags')),
+                'notExpecting'              => strtoupper($this->request->getPost('kit-req-not-expecting', 'striptags')),
+                'doctorName'              => strtoupper($this->request->getPost('kit-req-gynaecologist', 'striptags')),
+                'referral'              => strtoupper($this->request->getPost('kit-req-referral', 'striptags')),
+                'ads'              => strtoupper($this->request->getPost('kit-req-advertisement', 'striptags')),
+                'message'              => strtoupper($this->request->getPost('kit-req-message', 'striptags')),
+                'contactPreference'              => strtoupper($this->request->getPost('contact-by', 'striptags')),
             ));
 
             $mg = new Mailgun('key-8ahfzz3u5lifesit7-kkxfbma1eimxw7');
@@ -44,8 +62,8 @@ class HargaPendaftaranController extends ControllerBase
             $mg->sendMessage($domain, array(
                     'from'      => 'test@sandbox1f5872f7f4bf4be9bd003123c67778f9.mailgun.org',
                     'to'        => 'jimmycdinata@gmail.com',
-                    'cc'        => 'kaemale@gmail.com',
-                    'subject'   => 'From mailgun php',
+                    //'cc'        => 'kaemale@gmail.com, admin@stemcord.co',
+                    'subject'   => 'Permintaan Information Kit: ' . $name,
                     'html'      => $template
                 ));
 
@@ -66,6 +84,7 @@ class HargaPendaftaranController extends ControllerBase
             'publicUrl' => $this->config->application->publicUrl,
         ), $params);
 
+        // Set folder name 'email' app/views/email
         return $this->view->getRender('email', $name, $parameters, function($view){
             $view->setRenderLevel(View::LEVEL_LAYOUT);
         });
