@@ -4376,3 +4376,9 @@ font-weight: bold;
 /* IE6, IE7, IE8 */
 
 .fancybox-ie .fancybox-bg { background: transparent !important; }
+
+
+.form-error-mark {
+	color: red;
+	float: left;
+}
