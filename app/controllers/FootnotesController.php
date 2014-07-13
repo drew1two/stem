@@ -20,6 +20,15 @@ class FootnotesController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'privacy-policy');
+		$this->dispatcher->forward(array(
+			"controller" => "footnotes",
+			"action" => "privacypolicy"
+		));
+	}
+
 	public function privacyPolicyAction()
 	{
 		

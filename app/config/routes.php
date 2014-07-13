@@ -15,5 +15,4 @@ $router->add('/([a-zA-Z\-]+)/([a-zA-Z\-]+)/:params', array(
     //return $action;
 });
 
-
 return $router;

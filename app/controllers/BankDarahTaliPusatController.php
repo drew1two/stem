@@ -24,6 +24,15 @@ class BankDarahTaliPusatController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'keuntungan-bank-darah-tali-pusat');
+		$this->dispatcher->forward(array(
+			"controller" => "bank-darah-tali-pusat",
+			"action" => "keuntunganbankdarahtalipusat"
+		));
+	}
+
 	public function keuntunganBankDarahTaliPusatAction()
 	{
 		

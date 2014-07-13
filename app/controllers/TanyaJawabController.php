@@ -22,6 +22,15 @@ class TanyaJawabController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'sel-punca-darah-tali-pusat');
+		$this->dispatcher->forward(array(
+			"controller" => "tanya-jawab",
+			"action" => "selpuncadarahtalipusat"
+		));
+	}
+
     public function selPuncaDarahTaliPusatAction()
     {
     	

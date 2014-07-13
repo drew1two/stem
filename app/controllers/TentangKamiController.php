@@ -21,6 +21,15 @@ class TentangKamiController extends ControllerBase
 		);
 	}
 
+    public function indexAction()
+    {
+        $this->view->setVar('linkActionUri', 'tentang-stemcord');
+        $this->dispatcher->forward(array(
+            "controller" => "tentang-kami",
+            "action" => "tentangstemcord"
+        ));
+    }
+
     public function tentangStemcordAction()
     {
     	$this->view->setVar('metaDescription', 'StemCord Indonesia adalah perusahaan penyelenggara jasa bank darah tali pusat terbaik di Indonesia untuk penyimpanan darah tali pusat Anda di Singapura');

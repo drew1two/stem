@@ -20,6 +20,15 @@ class HargaPendaftaranController extends ControllerBase
 		);
 	}
 
+    public function indexAction()
+    {
+        $this->view->setVar('linkActionUri', 'harga');
+        $this->dispatcher->forward(array(
+            "controller" => "harga-pendaftaran",
+            "action" => "harga"
+        ));
+    }
+
     public function hargaAction()
     {
     	

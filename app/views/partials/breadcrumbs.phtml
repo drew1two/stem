@@ -2,7 +2,7 @@
 <ul class="bread_crumb">
 	<li><a href="{{ url() }}" title="Home">Home</a></li>
 	<li class="separator icon_small_arrow right_gray">&nbsp;</li>
-	<li><a href="{{ url(menu ~ '/' ~ subMenus[0]) }}">{{ linkDisplay(menu) }}</a></li>
+	<li><a href="{{ url(menu ~ '/') }}">{{ linkDisplay(menu) }}</a></li>
 	<li class="separator icon_small_arrow right_gray">&nbsp;</li>
-	<li>{{ linkDisplay(linkActionUri) }}</li>
+	<li style="text-decoration:none">{{ linkDisplay(linkActionUri) }}</li>
 </ul>

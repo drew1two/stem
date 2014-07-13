@@ -22,6 +22,15 @@ class LayananPelangganController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'friend-refer-friend');
+		$this->dispatcher->forward(array(
+			"controller" => "layanan-pelanggan",
+			"action" => "friendreferfriend"
+		));
+	}
+
 	public function friendReferFriendAction()
 	{
 		

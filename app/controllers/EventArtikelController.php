@@ -19,6 +19,15 @@ class EventArtikelController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'event');
+		$this->dispatcher->forward(array(
+			"controller" => "event-artikel",
+			"action" => "event"
+		));
+	}
+
 	public function eventAction()
 	{
 		

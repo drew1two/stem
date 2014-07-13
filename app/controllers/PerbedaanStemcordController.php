@@ -21,6 +21,15 @@ class PerbedaanStemcordController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'mengapa-stemcord');
+		$this->dispatcher->forward(array(
+			"controller" => "perbedaan-stemcord",
+			"action" => "mengapastemcord"
+		));
+	}
+
 	public function mengapaStemcordAction()
 	{
 		

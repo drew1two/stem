@@ -121,17 +121,27 @@ $di->set('dispatcher', function() use($di) {
 		"dispatch:beforeException",
 		function($event, $dispatcher, $exception)
 		{
-			switch ($exception->getCode()) {
-				case Phalcon\Mvc\Dispatcher::EXCEPTION_HANDLER_NOT_FOUND:
-				case Phalcon\Mvc\Dispatcher::EXCEPTION_ACTION_NOT_FOUND:
-					$dispatcher->forward(
-						array(
-							'controller' => 'error',
-							'action'     => 'show404',
-						)
-					);
-					return false;
-			}
+			//The controller exists but the action not
+	        if ($event->getType() == 'beforeNotFoundAction') {
+	            $dispatcher->forward(array(
+	                'controller' => 'error',
+	                'action' => 'show404'
+	            ));
+	            return false;
+	        }
+
+	        //Alternative way, controller or action doesn't exists
+	        if ($event->getType() == 'beforeException') {
+	            switch ($exception->getCode()){
+	                case Phalcon\Dispatcher::EXCEPTION_HANDLER_NOT_FOUND:
+	                case Phalcon\Dispatcher::EXCEPTION_ACTION_NOT_FOUND:
+	                    $dispatcher->forward(array(
+	                        'controller' => 'error',
+	                        'action' => 'show404'
+	                    ));
+	                    return false;               
+	            }
+	        }
 		}
 	);
 	

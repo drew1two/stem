@@ -20,6 +20,15 @@ class UntukKlienController extends ControllerBase
 		);
 	}
 
+	public function indexAction()
+	{
+		$this->view->setVar('linkActionUri', 'buat-enquiry');
+		$this->dispatcher->forward(array(
+			"controller" => "untuk-klien",
+			"action" => "buatenquiry"
+		));
+	}
+
 	public function buatEnquiryAction()
 	{
 		
