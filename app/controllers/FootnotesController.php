@@ -4,7 +4,7 @@ namespace Stemcord\Controllers;
 
 use Phalcon\Mvc\View;
 
-class LayananPelangganController extends ControllerBase
+class FootnotesController extends ControllerBase
 {
 	public function initialize()
 	{
@@ -14,7 +14,7 @@ class LayananPelangganController extends ControllerBase
 		$this->view->menu = 'footnotes';
 		$this->view->subMenus = array(
 			'privacy-policy',
-			'terms-conditions',
+			'terms-and-conditions',
 			'disclaimer',
 			'site-map',
 		);
@@ -25,7 +25,7 @@ class LayananPelangganController extends ControllerBase
 		
 	}
 
-	public function termsConditionsAction()
+	public function termsAndConditionsAction()
 	{
 		
 	}

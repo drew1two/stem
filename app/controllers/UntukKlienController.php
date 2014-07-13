@@ -4,14 +4,14 @@ namespace Stemcord\Controllers;
 
 use Phalcon\Mvc\View;
 
-class LayananPelangganController extends ControllerBase
+class UntukKlienController extends ControllerBase
 {
 	public function initialize()
 	{
 		parent::initialize();
 		$this->view->setTemplateBefore('public');
 
-		$this->view->menu = 'untuk-pelanggan';
+		$this->view->menu = 'untuk-klien';
 		$this->view->subMenus = array(
 			'buat-enquiry',
 			'tanya-dokter',
