@@ -1,0 +1,28 @@
+{% extends "layouts/template.phtml" %}
+{% block content %}
+<h2 class="box_header">Pilihan Pembayaran</h2>
+						<p>You can make use of the following convenient modes of payment for StemCord cord blood banking services.</p>
+
+<ul class="multiline-list clearfix">
+	<li class="icon_small_arrow right_lightblue">
+<span class="darkblue">PayPal</span><br />
+Online payment with <a href="/client-centre/paypal-payment/" title="StemCord PayPal Payment">PayPal</a>
+	</li>
+	<li class="icon_small_arrow right_lightblue">
+<span class="darkblue">AXS</span><br />
+Payment can be made via NETS at any AXS Stations islandwide. Simply select “Bills” – “Healthcare” – “StemCord Cord Blood Bank”. Visit <a href="http://www.axs.com.sg/" target="_blank" alt="AXS Payment">www.axs.com.sg</a> for more information.
+	</li>
+	<li class="icon_small_arrow right_lightblue">
+<span class="darkblue">Credit Card Instalment Payment Plan</span><br />
+Take up our monthly instalment plans with various banks.
+	</li>
+	<li class="icon_small_arrow right_lightblue">
+<span class="darkblue">Baby Bonus Scheme</span><br />
+Singaporeans may use the funds in your <a href="https://www.babybonus.gov.sg/bbss/html/index.html" target="_blank">Child Development Account (CDA)</a> for payments. 
+	</li>
+	<li class="icon_small_arrow right_lightblue">
+<span class="darkblue">By Cheque or Credit Card Payment</span><br />
+Simply complete your <a href="{{ url('layanan-pelanggan/download-form') }}">Credit Card Authorization Form</a> and <a href="{{ url('layanan-pelanggan/penyerahan-dokumen') }}">submit it online</a>. Alternatively, you can fax the form to {{ phoneFullTag }} or email it to {{ billingEmailFullTag }} for payment.
+	</li>
+</ul>									
+{% endblock %}

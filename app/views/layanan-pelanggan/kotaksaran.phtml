@@ -1,0 +1,78 @@
+{% extends "layouts/template.phtml" %}
+{% block content %}
+<h2 class="box_header">Kotak Saran</h2>
+						<ul class="gallery_item_details_list clearfix">
+
+	<li id="gallery-details-1" class="gallery_item_details clearfix"><div class="columns no_width"><div class="column_left"><div class="details_box">
+
+
+<br />
+<p>Your form was submitted successfully.</p>
+<p>We value your feedback and we will contact you via email as soon as we can.</p>
+<br />
+<p>Thank you and have a pleasant day ahead.</p>
+<br />
+<p>Warmest Regards,<br />
+StemCord Singapore</p>
+		
+	<ul class="controls page_margin_top"><li><a href="#gallery-details-close">Return to Previous Page</a></li></ul></div></div></div></li>
+	
+</ul>
+
+<div class="gallery-hide">
+
+<p>Kindly submit your feedback below and we will be in contact with you soon.</p>
+
+<div class="wpcf7" id="wpcf7-f519-p520-o1">
+<div class="screen-reader-response"></div>
+<form action="/client-centre/stemcord-client-feedback/#wpcf7-f519-p520-o1" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="519" />
+<input type="hidden" name="_wpcf7_version" value="3.8.1" />
+<input type="hidden" name="_wpcf7_locale" value="" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f519-p520-o1" />
+<input type="hidden" name="_wpnonce" value="ba712f4761" />
+</div>
+<div class="contact_form">
+
+<div class="clearfix">
+<div class="note">fields marked with * are mandatory</div>
+<fieldset class="left">
+
+    <label>SCP Number</label><div class="block">
+        <span class="wpcf7-form-control-wrap feedback-scp"><input type="text" name="feedback-scp" value="" size="8" maxlength="8" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span>
+    </div>
+
+    <label>Name *</label><div class="block">
+        <span class="wpcf7-form-control-wrap feedback-name"><input type="text" name="feedback-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" id="feedback-name" aria-required="true" aria-invalid="false" /></span>
+    </div>
+
+    <label>Email Address *</label><div class="block">
+        <span class="wpcf7-form-control-wrap feedback-email"><input type="email" name="feedback-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text_input" aria-required="true" aria-invalid="false" /></span>
+    </div>
+
+    <label>Contact Number *</label><div class="block">
+        <span class="wpcf7-form-control-wrap feedback-contact-num"><input type="text" name="feedback-contact-num" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
+    </div>
+
+</fieldset>
+
+<fieldset class="right">
+
+    <label>Message *</label><div class="block">
+        <span class="wpcf7-form-control-wrap feedback-message"><textarea name="feedback-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false"></textarea></span>
+    </div>
+
+</fieldset>
+</div>
+
+<p class="submit-consent">By submitting this form, I accept and agree to be included in StemCord’s mailing list, and to be contacted by StemCord and partners for future communications.<br>
+I prefer to be contacted by:
+<span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telephone" />&nbsp;<span class="wpcf7-list-item-label">Telephone</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
+
+<p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit more blue" /></p>
+
+</div><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+
+</div>									
+{% endblock %}

@@ -13,7 +13,6 @@ class LayananPelangganController extends ControllerBase
 
 		$this->view->menu = 'layanan-pelanggan';
 		$this->view->subMenus = array(
-			'index',
 			'friend-refer-friend',
 			'penyerahan-dokumen',
 			'perbaharui-informasi-anda',
@@ -21,11 +20,6 @@ class LayananPelangganController extends ControllerBase
 			'pilihan-pembayaran',			
 			'kotak-saran',
 		);
-	}
-
-	public function indexAction()
-	{
-		
 	}
 
 	public function friendReferFriendAction()

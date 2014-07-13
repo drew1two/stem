@@ -22,6 +22,7 @@ class ControllerBase extends Controller
 		$this->view->setVar('companyName', 'StemCord Indonesia');
 		$this->view->setVar('putJavascriptAtTop', 'false');
 		$this->view->setVar('emailFullTag', '<a href="mailto:info@stemcord.co">info@stemcord.co</a>');
+		$this->view->setVar('billingEmailFullTag', '<a href="mailto:billing@stemcord.co">billing@stemcord.co</a>');
 
 		$uri = '';
 		$title = 'Bank Darah Tali Pusat';
