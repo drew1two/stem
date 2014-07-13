@@ -77,7 +77,42 @@ class UntukKlienController extends ControllerBase
 
 	public function buatJanjiAction()
 	{
-		
+		$this->view->isSubmit = false;
+        if ($this->request->isPost()) {
+            $name = strtoupper($this->request->getPost('appt-name', 'striptags'));
+
+            $this->view->name = $name;
+
+            $contactPreference = '';
+            if ($this->request->getPost('contact-by')) {
+            	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+            }
+
+            $template = $this->getTemplate('appointment', array(
+                'name'				=> $name,
+                'nric'				=> strtolower($this->request->getPost('appt-nric', 'striptags')),
+                'email'				=> strtolower($this->request->getPost('appt-email', 'striptags')),
+                'phone'				=> strtoupper($this->request->getPost('appt-contact-number', 'striptags')),
+                'birthDate'			=> strtoupper($this->request->getPost('appt-expected-date-of-delivery', 'striptags')),
+                'hospital'			=> strtoupper($this->request->getPost('appt-delivery-hospital', 'striptags')),
+                'doctorName'		=> strtoupper($this->request->getPost('appt-gynaecologist', 'striptags')),
+                'preferredDate'		=> strtoupper($this->request->getPost('appt-preferred-date', 'striptags')),
+                'contactPreference'	=> strtoupper($contactPreference),
+            ));
+
+            $mg = new Mailgun($this->config->mail->mailgunApiKey);
+            $domain = $this->config->mail->mailgunDomain;
+
+            $mg->sendMessage($domain, array(
+                    'from'      => $this->config->mail->from,
+                    'to'        => $this->config->mail->to,
+                    //'cc'        => $this->config->mail->cc,
+                    'subject'   => 'Permintaan Enquiry: ' . $name,
+                    'html'      => $template
+                ));
+
+            $this->view->isSubmit = true;
+        }
 	}
 
 	public function kontakKamiAction()

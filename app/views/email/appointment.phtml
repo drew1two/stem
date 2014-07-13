@@ -1,13 +1,18 @@
 
-<h2>Permintaan Enquiry: {{ name }}</h2>
+<h2>Permintaan Appointment: {{ name }}</h2>
 <br/>
-<p>Mohon permintaan enquiry atas nama berikut ini di-follow up:</p>
+<p>Mohon permintaan appointment atas nama berikut ini di-follow up:</p>
 <br/>
 <table>
 	<tr>
 		<td>Nama</td>
 		<td>:</td>
 		<td>{{ name }}</td>
+	</tr>
+	<tr>
+		<td>NRIC</td>
+		<td>:</td>
+		<td>{{ nric }}</td>
 	</tr>
 	<tr>
 		<td>Email</td>
@@ -37,14 +42,9 @@
 	</tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr>
-		<td>Subjek</td>
+		<td>Tanggal Diharapkan</td>
 		<td>:</td>
-		<td>{{ subject }}</td>
-	</tr>
-	<tr>
-		<td>Permohonan</td>
-		<td>:</td>
-		<td>{{ enquiry }}</td>
+		<td>{{ preferredDate }}</td>
 	</tr>
 	<tr><td>&nbsp;</td></tr>
 	<tr>

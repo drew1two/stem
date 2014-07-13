@@ -1,24 +1,24 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
-					<h2 class="box_header">Buat Janji</h2>
-						<ul class="gallery_item_details_list clearfix">
+					<h2 class="box_header">Buat Janji Appointment</h2>
+                    {% if isSubmit %}
+						<ul>
 
 	<li id="gallery-details-1" class="gallery_item_details clearfix"><div class="columns no_width"><div class="column_left"><div class="details_box">
 
 
 <br />
-<p>Your form was submitted successfully.</p>
-<p>Thank you for making an appointment with us. Your dedicated consultant will be contacting you shortly and we look forward to meeting you in person. Please do not hesitate to contact us at (65) 6471 2002 should you require further assistance.</p>
+<p>Dear <strong>{{ name }}</strong>, Permintaan Appointment Anda sudah diterima.</p>
+<p>Terima kasih telah mengirimkan permintaan informasi ini. Staff kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan hubungi {{ phoneFullTag }}.</p>
 <br />
-<p>Thank you and have a pleasant day ahead.</p>
+<p>Terima kasih</p>
 <br />
-<p>Warmest Regards,<br />
-StemCord Singapore</p>
-		
-	<ul class="controls page_margin_top"><li><a href="#gallery-details-close">Return to Previous Page</a></li></ul></div></div></div></li>
-	
+<p>Salam,<br />
+StemCord Indonesia</p>
+        
+    <ul class="controls page_margin_top"><li><a href="{{ url('untuk-klien/buat-janji') }}">Kembali ke halaman sebelumnya</a></li></ul></div></div></div></li>
 </ul>
-
+{% else %}
 <div class="gallery-hide">
 
 <p>Make an Appointment with us to find out more about Cord Blood Banking and our services.</p>
@@ -27,7 +27,7 @@ StemCord Singapore</p>
 
 <div class="wpcf7" id="wpcf7-f992-p993-o1">
 <div class="screen-reader-response"></div>
-<form action="/for-clients/make-an-appointment/#wpcf7-f992-p993-o1" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
+<form action="{{ url('untuk-klien/buat-janji') }}" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="992" />
 <input type="hidden" name="_wpcf7_version" value="3.8.1" />
@@ -74,7 +74,7 @@ StemCord Singapore</p>
 
     <label>Delivery Hospital *</label>
     <div class="block">
-        <span class="wpcf7-form-control-wrap appt-delivery-hospital"><select name="appt-delivery-hospital" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required select-box" aria-required="true" aria-invalid="false"><option value="">---</option><option value="Gleneagles Hospital">Gleneagles Hospital</option><option value="KK Women&#039;s &amp; Children&#039;s Hospital">KK Women&#039;s &amp; Children&#039;s Hospital</option><option value="Mount Alvernia Hospital">Mount Alvernia Hospital</option><option value="Mount Elizabeth Hospital">Mount Elizabeth Hospital</option><option value="Mount Elizabeth Novena Hospital">Mount Elizabeth Novena Hospital</option><option value="National University Hospital">National University Hospital</option><option value="Parkway East Hospital">Parkway East Hospital</option><option value="Singapore General Hospital">Singapore General Hospital</option><option value="Thomson Medical Centre">Thomson Medical Centre</option><option value="Raffles Hospital">Raffles Hospital</option><option value="Not Applicable">Not Applicable</option></select></span>
+        <span class="wpcf7-form-control-wrap appt-delivery-hospital"><input type="text" name="appt-delivery-hospital" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
     <label>Name of Gynaecologist *</label>
@@ -93,5 +93,6 @@ I prefer to be contacted by:
 
 </div><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
 
-</div>																
+</div>
+{% endif %} 																
 {% endblock %}
