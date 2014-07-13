@@ -446,7 +446,8 @@ width: 250px;
 	}
 	.comment_form .text_input, .comment_form textarea
 	{
-		width: 137px;
+		/*width: 137px;*/
+width: 264px;
 	}
 	.contact_form .text_input
 	{
@@ -535,6 +536,20 @@ width: 250px;
 	{
 		margin-right: 23px;
 	}
+.column_left_accordion, .column_right_accordion
+{
+clear: both;
+float: none;
+width: auto;
+}
+.column_left_accordion
+{
+margin-right: 0;
+}
+.column_right_accordion
+{
+margin-top: 23px;
+}
 	.columns p
 	{
 		padding: 21px 0;
@@ -774,12 +789,12 @@ float: right;
 @media screen and (max-width:767px)
 {
 #header-logo {
-background: url(/wp-content/themes/stemcord/images/header_logo_195.png) no-repeat center;
+background: url(images/header_logo_195.png) no-repeat center;
 width: 195px;
 height: 69px;
 }
 #stemcord-fact {
-background: url(/wp-content/themes/stemcord/images/accredited-by-fact-netcord-69.png) no-repeat center;
+background: url(images/accredited-by-fact-netcord-69.png) no-repeat center;
 width: 247px;
 height: 69px;
 }
@@ -834,11 +849,11 @@ display: block;
 cursor: pointer;
 }
 a.slider-nav-prev-480 {
-background: url(/wp-content/uploads/2013/03/slide_arrow_left_480.png) 0 0 no-repeat transparent;
+background: url(images/slide_arrow_left_480.png) 0 0 no-repeat transparent;
 float: left;
 }
 a.slider-nav-next-480 {
-background: url(/wp-content/uploads/2013/03/slide_arrow_right_480.png) 0 0 no-repeat transparent;
+background: url(images/slide_arrow_right_480.png) 0 0 no-repeat transparent;
 float: right;
 }
 #home-final-third .left {
@@ -1065,7 +1080,8 @@ margin: 0 auto;
 	}
 	.comment_form .text_input, .comment_form textarea
 	{
-		width: 131px;
+		/*width: 131px;*/
+width: 264px;
 	}
 	.contact_form .left, .contact_form .right
 	{
@@ -1187,7 +1203,8 @@ margin: 0 auto;
 	/* --- timetable --- */
 	.timetable
 	{
-		display: none;
+		/*display: none;*/
+		font-size: 12px;
 	}
 	.timetable.small
 	{
