@@ -38,22 +38,27 @@ class HargaPendaftaranController extends ControllerBase
 
             $this->view->name = $name;
 
+            $contactPreference = '';
+            if ($this->request->getPost('contact-by')) {
+            	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+            }
+
             $template = $this->getTemplate('permintaan-information-kit', array(
-                'confirmUrl'    => '/confirm/' . '123' . '/' . 'someemailhere',
-                'name'          => $name,
-                'email'         => strtolower($this->request->getPost('kit-req-email', 'striptags')),
-                'phone'              => strtoupper($this->request->getPost('kit-req-contact-num', 'striptags')),
-                'timeToPhone'              => strtoupper($this->request->getPost('kit-req-best-time-to-call', 'striptags')),
-                'address'              => strtoupper($this->request->getPost('kit-req-mail-address', 'striptags')),
-                'country'              => strtoupper($this->request->getPost('kit-req-country', 'striptags')),
-                'postalCode'              => strtoupper($this->request->getPost('kit-req-postalcode', 'striptags')),
-                'birthDate'              => strtoupper($this->request->getPost('kit-req-expected-date-of-delivery', 'striptags')),
-                'notExpecting'              => strtoupper($this->request->getPost('kit-req-not-expecting', 'striptags')),
-                'doctorName'              => strtoupper($this->request->getPost('kit-req-gynaecologist', 'striptags')),
-                'referral'              => strtoupper($this->request->getPost('kit-req-referral', 'striptags')),
-                'ads'              => strtoupper($this->request->getPost('kit-req-advertisement', 'striptags')),
-                'message'              => strtoupper($this->request->getPost('kit-req-message', 'striptags')),
-                'contactPreference'              => strtoupper($this->request->getPost('contact-by', 'striptags')),
+                'confirmUrl'		=> '/confirm/' . '123' . '/' . 'someemailhere',
+                'name'				=> $name,
+                'email'				=> strtolower($this->request->getPost('kit-req-email', 'striptags')),
+                'phone'				=> strtoupper($this->request->getPost('kit-req-contact-num', 'striptags')),
+                'timeToPhone'		=> strtoupper($this->request->getPost('kit-req-best-time-to-call', 'striptags')),
+                'address'			=> strtoupper($this->request->getPost('kit-req-mail-address', 'striptags')),
+                'country'			=> strtoupper($this->request->getPost('kit-req-country', 'striptags')),
+                'postalCode'		=> strtoupper($this->request->getPost('kit-req-postalcode', 'striptags')),
+                'birthDate'			=> strtoupper($this->request->getPost('kit-req-expected-date-of-delivery', 'striptags')),
+                'notExpecting'		=> strtoupper($this->request->getPost('kit-req-not-expecting', 'striptags')),
+                'doctorName'		=> strtoupper($this->request->getPost('kit-req-gynaecologist', 'striptags')),
+                'referral'			=> strtoupper($this->request->getPost('kit-req-referral', 'striptags')),
+                'ads'				=> strtoupper($this->request->getPost('kit-req-advertisement', 'striptags')),
+                'message'			=> strtoupper($this->request->getPost('kit-req-message', 'striptags')),
+                'contactPreference'	=> strtoupper($contactPreference),
             ));
 
             $mg = new Mailgun('key-8ahfzz3u5lifesit7-kkxfbma1eimxw7');
