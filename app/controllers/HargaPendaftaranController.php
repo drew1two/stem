@@ -70,13 +70,13 @@ class HargaPendaftaranController extends ControllerBase
                 'contactPreference'	=> strtoupper($contactPreference),
             ));
 
-            $mg = new Mailgun('key-8ahfzz3u5lifesit7-kkxfbma1eimxw7');
-            $domain = 'sandbox1f5872f7f4bf4be9bd003123c67778f9.mailgun.org';
+            $mg = new Mailgun($this->config->mail->mailgunApiKey);
+            $domain = $this->config->mail->mailgunDomain;
 
             $mg->sendMessage($domain, array(
-                    'from'      => 'test@sandbox1f5872f7f4bf4be9bd003123c67778f9.mailgun.org',
-                    'to'        => 'jimmycdinata@gmail.com',
-                    //'cc'        => 'kaemale@gmail.com, admin@stemcord.co',
+                    'from'      => $this->config->mail->from,
+                    'to'        => $this->config->mail->to,
+                    //'cc'        => $this->config->mail->cc,
                     'subject'   => 'Permintaan Information Kit: ' . $name,
                     'html'      => $template
                 ));
