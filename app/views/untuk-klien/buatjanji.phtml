@@ -1,6 +1,6 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
-					<h2 class="box_header">Buat Janji Appointment</h2>
+					<h2 class="box_header">Buat Janji (Appointment)</h2>
                     {% if isSubmit %}
 						<ul>
 
@@ -21,9 +21,9 @@ StemCord Indonesia</p>
 {% else %}
 <div class="gallery-hide">
 
-<p>Make an Appointment with us to find out more about Cord Blood Banking and our services.</p>
+<p>Buat janji bertemu dengan kami untuk mengetahui lebih lanjut tentang Bank Darah Tali Pusat dan layanan kami</p>
 
-<p>Please complete the form below so we could better appoint a consultant to serve you. We shall be contacting you shortly to arrange for an appointment.</p>
+<p>Silahkan isi form berikut ini supaya kami dapat menunjuk konsultan untuk melayani Anda. Kami akan segera mengontak Anda untuk membuat janji bertemu.</p>
 
 <div class="wpcf7" id="wpcf7-f992-p993-o1">
 <div class="screen-reader-response"></div>
@@ -34,13 +34,14 @@ StemCord Indonesia</p>
 <input type="hidden" name="_wpcf7_locale" value="" />
 <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f992-p993-o1" />
 <input type="hidden" name="_wpnonce" value="db285f9b0e" />
+<input type="text" name="input-pot" value= "" />
+
 </div>
 <div class="contact_form">
 <div class="clearfix">
-<div class="note">fields marked with * are mandatory</div>
+<div class="note">bagian yang ditandai dengan * wajib diisi.</div>
 <fieldset class="left">
-
-    <label>Name *</label><div class="block">
+    <label>Nama *</label><div class="block">
         <span class="wpcf7-form-control-wrap appt-name"><input type="text" name="appt-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" id="appt-name" aria-required="true" aria-invalid="false" /></span>
     </div>
 
@@ -48,12 +49,12 @@ StemCord Indonesia</p>
         <span class="wpcf7-form-control-wrap appt-nric"><input type="text" name="appt-nric" value="" size="40" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span> 
     </div>
 
-    <label>Contact Number *</label>
+    <label>Nomor Kontak *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-contact-number"><input type="text" name="appt-contact-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span> 
     </div>
 
-    <label>Email Address *</label>
+    <label>Email*</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-email"><input type="email" name="appt-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text_input" aria-required="true" aria-invalid="false" /></span> 
     </div>
@@ -62,22 +63,22 @@ StemCord Indonesia</p>
 
 <fieldset class="right">
 
-    <label>Preferred Appointment Date *</label>
+    <label>Tanggal Pertemuan Yang Diinginkan *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-preferred-date"><input type="text" name="appt-preferred-date" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required pick-date text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Expected Date of Delivery *</label>
+    <label>Tanggal Kelahiran Perkiraan *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-expected-date-of-delivery"><input type="text" name="appt-expected-date-of-delivery" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required pick-date text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Delivery Hospital *</label>
+    <label>Rumah Sakit *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-delivery-hospital"><input type="text" name="appt-delivery-hospital" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Name of Gynaecologist *</label>
+    <label>Dokter Kebidanan *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-gynaecologist"><input type="text" name="appt-gynaecologist" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
@@ -85,11 +86,11 @@ StemCord Indonesia</p>
 </fieldset>
 </div>
 
-<p class="submit-consent">By submitting this form, I accept and agree to be included in StemCord’s mailing list, and to be contacted by StemCord and partners for future communications.<br>
-I prefer to be contacted by:
-<span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telephone" />&nbsp;<span class="wpcf7-list-item-label">Telephone</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
+<p class="submit-consent">Dengan meng-input form ini. Saya menerima dan setuju untuk disertakan dalam mailing list StemCord dan dihubungi oleh Stemcord dan rekanan untuk komunikasi lebih lanjut.<br>
+Saya menyukai untuk dihubungi via:
+<span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telepon" />&nbsp;<span class="wpcf7-list-item-label">Telepon</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
 
-<p><input type="submit" value="Make an Appointment" class="wpcf7-form-control wpcf7-submit more blue" /></p>
+<p><input type="submit" value="Kirim" class="wpcf7-form-control wpcf7-submit more blue" /></p>
 
 </div><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
 

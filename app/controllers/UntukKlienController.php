@@ -79,39 +79,43 @@ class UntukKlienController extends ControllerBase
 	{
 		$this->view->isSubmit = false;
         if ($this->request->isPost()) {
+
+            $this->view->isSubmit = true;
+
             $name = strtoupper($this->request->getPost('appt-name', 'striptags'));
 
             $this->view->name = $name;
+            
+            if ($this->request->getPost('input-pot') == '') {
 
-            $contactPreference = '';
-            if ($this->request->getPost('contact-by')) {
-            	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
-            }
+                $contactPreference = '';
+                if ($this->request->getPost('contact-by')) {
+                	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+                }
 
-            $template = $this->getTemplate('appointment', array(
-                'name'				=> $name,
-                'nric'				=> strtolower($this->request->getPost('appt-nric', 'striptags')),
-                'email'				=> strtolower($this->request->getPost('appt-email', 'striptags')),
-                'phone'				=> strtoupper($this->request->getPost('appt-contact-number', 'striptags')),
-                'birthDate'			=> strtoupper($this->request->getPost('appt-expected-date-of-delivery', 'striptags')),
-                'hospital'			=> strtoupper($this->request->getPost('appt-delivery-hospital', 'striptags')),
-                'doctorName'		=> strtoupper($this->request->getPost('appt-gynaecologist', 'striptags')),
-                'preferredDate'		=> strtoupper($this->request->getPost('appt-preferred-date', 'striptags')),
-                'contactPreference'	=> strtoupper($contactPreference),
-            ));
-
-            $mg = new Mailgun($this->config->mail->mailgunApiKey);
-            $domain = $this->config->mail->mailgunDomain;
-
-            $mg->sendMessage($domain, array(
-                    'from'      => $this->config->mail->from,
-                    'to'        => $this->config->mail->to,
-                    //'cc'        => $this->config->mail->cc,
-                    'subject'   => 'Permintaan Enquiry: ' . $name,
-                    'html'      => $template
+                $template = $this->getTemplate('appointment', array(
+                    'name'				=> $name,
+                    'nric'				=> strtolower($this->request->getPost('appt-nric', 'striptags')),
+                    'email'				=> strtolower($this->request->getPost('appt-email', 'striptags')),
+                    'phone'				=> strtoupper($this->request->getPost('appt-contact-number', 'striptags')),
+                    'birthDate'			=> strtoupper($this->request->getPost('appt-expected-date-of-delivery', 'striptags')),
+                    'hospital'			=> strtoupper($this->request->getPost('appt-delivery-hospital', 'striptags')),
+                    'doctorName'		=> strtoupper($this->request->getPost('appt-gynaecologist', 'striptags')),
+                    'preferredDate'		=> strtoupper($this->request->getPost('appt-preferred-date', 'striptags')),
+                    'contactPreference'	=> strtoupper($contactPreference),
                 ));
 
-            $this->view->isSubmit = true;
+                $mg = new Mailgun($this->config->mail->mailgunApiKey);
+                $domain = $this->config->mail->mailgunDomain;
+
+                $mg->sendMessage($domain, array(
+                        'from'      => $this->config->mail->from,
+                        'to'        => $this->config->mail->to,
+                        //'cc'        => $this->config->mail->cc,
+                        'subject'   => 'Permintaan Janji Appointment: ' . $name,
+                        'html'      => $template
+                    ));
+            }
         }
 	}
 
