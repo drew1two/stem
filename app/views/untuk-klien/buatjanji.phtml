@@ -1,6 +1,6 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
-					<h2 class="box_header">Buat Janji (Appointment)</h2>
+					<h2 class="box_header">Membuat Janji Temu (Appointment)</h2>
                     {% if isSubmit %}
 						<ul>
 
@@ -21,9 +21,9 @@ StemCord Indonesia</p>
 {% else %}
 <div class="gallery-hide">
 
-<p>Buat janji bertemu dengan kami untuk mengetahui lebih lanjut tentang Bank Darah Tali Pusat dan layanan kami</p>
+<p>Membuat janji temu  dengan kami untuk mengetahui lebih lanjut tentang Penyimpanan Darah Tali Pusat dan layanan kami lainnya.</p>
 
-<p>Silahkan isi form berikut ini supaya kami dapat menunjuk konsultan untuk melayani Anda. Kami akan segera mengontak Anda untuk membuat janji bertemu.</p>
+<p>Silakan isi formulir di bawah ini sehingga kami  bisa menunjuk konsultan untuk melayani Anda. Kami akan segera menghubungi Anda untuk mengatur janji temu.</p>
 
 <div class="wpcf7" id="wpcf7-f992-p993-o1">
 <div class="screen-reader-response"></div>
@@ -45,16 +45,16 @@ StemCord Indonesia</p>
         <span class="wpcf7-form-control-wrap appt-name"><input type="text" name="appt-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" id="appt-name" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>NRIC</label><div class="block">
+    <label>KTP</label><div class="block">
         <span class="wpcf7-form-control-wrap appt-nric"><input type="text" name="appt-nric" value="" size="40" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span> 
     </div>
 
-    <label>Nomor Kontak *</label>
+    <label>Telepon *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-contact-number"><input type="text" name="appt-contact-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span> 
     </div>
 
-    <label>Email*</label>
+    <label>Alamat Email*</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-email"><input type="email" name="appt-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email text_input" aria-required="true" aria-invalid="false" /></span> 
     </div>
@@ -63,22 +63,22 @@ StemCord Indonesia</p>
 
 <fieldset class="right">
 
-    <label>Tanggal Pertemuan Yang Diinginkan *</label>
+    <label>Rencana Janji Temu Tanggal *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-preferred-date"><input type="text" name="appt-preferred-date" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required pick-date text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Tanggal Kelahiran Perkiraan *</label>
+    <label>Rencana Tanggal Kelahiran *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-expected-date-of-delivery"><input type="text" name="appt-expected-date-of-delivery" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required pick-date text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Rumah Sakit *</label>
+    <label>Rumah Sakit Tempat Melahirkan*</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-delivery-hospital"><input type="text" name="appt-delivery-hospital" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
 
-    <label>Dokter Kebidanan *</label>
+    <label>Nama Dokter Kebidanan *</label>
     <div class="block">
         <span class="wpcf7-form-control-wrap appt-gynaecologist"><input type="text" name="appt-gynaecologist" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
     </div>
@@ -87,7 +87,7 @@ StemCord Indonesia</p>
 </div>
 
 <p class="submit-consent">Dengan meng-input form ini. Saya menerima dan setuju untuk disertakan dalam mailing list StemCord dan dihubungi oleh Stemcord dan rekanan untuk komunikasi lebih lanjut.<br>
-Saya menyukai untuk dihubungi via:
+Saya lebih menyukai untuk dihubungi dengan cara:
 <span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telepon" />&nbsp;<span class="wpcf7-list-item-label">Telepon</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
 
 <p><input type="submit" value="Kirim" class="wpcf7-form-control wpcf7-submit more blue" /></p>

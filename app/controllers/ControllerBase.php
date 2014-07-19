@@ -18,6 +18,7 @@ class ControllerBase extends Controller
 		$this->view->setVar('phoneSimple', '021-520-6555/6');
 		$this->view->setVar('faxSimple', '021-520-6551');
 		$this->view->setVar('phoneCall', '+62215206555');
+		$this->view->setVar('mobileCall', '08118800488');
 		$this->view->setVar('phoneFullTag', '<a href="tel:+62215206555"><span class="lightblue">(021) 520-6555/6</span></a>');
 		$this->view->setVar('companyName', 'StemCord Indonesia');
 		$this->view->setVar('putJavascriptAtTop', 'false');
