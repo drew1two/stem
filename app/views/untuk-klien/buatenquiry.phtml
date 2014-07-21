@@ -1,6 +1,6 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
-					<h2 class="box_header">Buat Enquiry</h2>
+					<h2 class="box_header">Membuat Permohonan</h2>
                     {% if isSubmit %}
 						<ul>
 
@@ -8,20 +8,20 @@
 
 
 <br />
-<p>Kepada Yth <strong>{{ name }}</strong>, Permintaan Enquiry Anda sudah diterima.</p>
-<p>Terima kasih telah mengirimkan permintaan informasi ini. Staff kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan hubungi {{ phoneFullTag }}.</p>
+<p>Kepada Yth <strong>{{ name }}</strong>, Permohonan Anda sudah diterima.</p>
+<p>Terima kasih telah mengirimkan permohonan informasi ini. Konsultan kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan menghubungi {{ phoneFullTag }} atau {{ mobileCall }}.</p>
 <br />
 <p>Terima kasih</p>
 <br />
 <p>Salam,<br />
-StemCord Indonesia</p>
+StemCord</p>
         
     <ul class="controls page_margin_top"><li><a href="{{ url('untuk-klien/buat-enquiry') }}">Kembali ke halaman sebelumnya</a></li></ul></div></div></div></li>
 </ul>
 {% else %}
 <div class="gallery-hide">
 
-<p>Cukup masukan pertanyaan Anda dalam kotak di bawah dan kami akan merespon anda melalui email.</p>
+<p>Cukup tuliskan pertanyaan Anda dalam kotak di bawah dan kami akan merespon anda melalui email.</p>
 
 <div class="wpcf7" id="wpcf7-f433-p436-o1">
 <div class="screen-reader-response"></div>
