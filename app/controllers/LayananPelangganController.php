@@ -109,7 +109,88 @@ class LayananPelangganController extends ControllerBase
 
 	public function penyerahanDokumenAction()
 	{
-		
+		$this->view->isSubmit = false;
+        if ($this->request->isPost()) {
+
+            $this->view->isSubmit = true;
+
+            $name = strtoupper($this->request->getPost('submit-mothers-name', 'striptags'));
+
+            $this->view->name = $name;
+
+            $this->view->error = '';
+            
+            if ($this->request->getPost('input-pot') == '') {
+            	if ($this->request->hasFiles() == true)
+				{
+					$result = array();
+					foreach ($this->request->getUploadedFiles() as $file)
+					{
+						$filename = $file->getName();
+						$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extension
+						$file_ext = substr($filename, strripos($filename, '.')); // get file name
+						$filesize = $file->getSize();
+						
+						//$allowed_file_types = array('.jpg','.jpeg','.png', '.gif');
+						$allowed_file_types = array('.jpeg','.jpg','.pdf');
+						
+						if (in_array($file_ext,$allowed_file_types) && ($filesize < 20000000))
+						{			
+							$newfilename = $this->randomString(12);
+							$file->moveTo('files/' . $newfilename . '.pdf');
+							//$result['upload_file_name'] = $newfilename;
+
+							$contactPreference = '';
+			                if ($this->request->getPost('contact-by')) {
+			                	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+			                }
+
+			                $template = $this->getTemplate('penyerahandokumen', array(
+			                    'name'				=> $name,
+			                    'email'				=> strtolower($this->request->getPost('submit-mothers-email', 'striptags')),
+			                    'phone'				=> strtoupper($this->request->getPost('submit-mothers-contact', 'striptags')),
+			                    'scp'				=> strtoupper($this->request->getPost('submit-mothers-scp', 'striptags')),
+			                    'mothersId'			=> strtoupper($this->request->getPost('submit-mothers-ID', 'striptags')),
+			                    'notes'				=> $this->request->getPost('submit-remarks', 'striptags'),
+			                    'contactPreference'	=> strtoupper($contactPreference),
+			                ));
+
+			                $mg = new Mailgun($this->config->mail->mailgunApiKey);
+			                $domain = $this->config->mail->mailgunDomain;
+
+			                $mg->sendMessage($domain, array(
+			                        'from'      	=> $this->config->mail->from,
+			                        'to'        	=> $this->config->mail->to,
+			                        //'cc'       	=> $this->config->mail->cc,
+			                        'subject'   	=> 'Penyerahan Dokumen: ' . $name,
+			                        'html'      	=> $template,
+			                        'attachment' 	=> '@files/'. $newfilename . '.pdf',
+			                    ));
+
+						}
+						elseif (empty($file_basename))
+						{	
+							// file selection error
+							$this->view->error = 'Please select a file to upload.';
+						} 
+						elseif ($filesize > 20000000)
+						{	
+							// file size error
+							$this->view->error = 'The file you are trying to upload is too large.';
+						}
+						else
+						{
+							// file type error
+							$this->view->error = 'Only these file types are allowed for upload: ' . implode(', ',$allowed_file_types);
+						}
+					}
+					
+					
+				}
+
+                
+            }
+        }
 	}
 
 	public function perbaharuiInformasiAndaAction()
@@ -152,5 +233,15 @@ class LayananPelangganController extends ControllerBase
 
         return $this->$view->getContent();
     }
+
+    private function randomString($length=1)
+	{
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$randomString = '';
+		for ($i = 0; $i < $length; $i++) {
+			$randomString .= $characters[rand(0, strlen($characters) - 1)];
+		}
+		return $randomString;
+	}
 }
 
