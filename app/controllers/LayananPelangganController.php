@@ -195,7 +195,49 @@ class LayananPelangganController extends ControllerBase
 
 	public function perbaharuiInformasiAndaAction()
 	{
-		
+		$this->view->isSubmit = false;
+        if ($this->request->isPost()) {
+
+            $this->view->isSubmit = true;
+
+            $name = strtoupper($this->request->getPost('update-mother-name', 'striptags'));
+
+            $this->view->name = $name;
+           
+            if ($this->request->getPost('input-pot') == '') {
+
+                $contactPreference = '';
+                if ($this->request->getPost('contact-by')) {
+                	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+                }
+
+                $template = $this->getTemplate('perbaharuiinformasi', array(
+                    'name'				=> $name,
+                    'idNumber'			=> strtoupper($this->request->getPost('update-mother-id-number', 'striptags')),
+                    'scp'				=> strtoupper($this->request->getPost('update-scp', 'striptags')),
+                    'phoneCurrent'		=> strtoupper($this->request->getPost('update-current-mobile-num', 'striptags')),
+                    'phoneNew'			=> strtoupper($this->request->getPost('update-new-mobile-num', 'striptags')),
+                    'emailCurrent'		=> strtoupper($this->request->getPost('update-current-email-address', 'striptags')),
+                    'emailNew'			=> strtoupper($this->request->getPost('update-new-email-address', 'striptags')),
+                    'mailingCurrent'	=> strtoupper($this->request->getPost('update-current-mailing-address', 'striptags')),
+                    'mailingNew'		=> strtoupper($this->request->getPost('update-new-mailing-address', 'striptags')),
+                    'startDate'			=> strtoupper($this->request->getPost('update-date-of-change', 'striptags')),
+                    'comments'			=> $this->request->getPost('update-comments', 'striptags'),
+                    'contactPreference'	=> strtoupper($contactPreference),
+                ));
+
+                $mg = new Mailgun($this->config->mail->mailgunApiKey);
+                $domain = $this->config->mail->mailgunDomain;
+
+                $mg->sendMessage($domain, array(
+                        'from'      => $this->config->mail->from,
+                        'to'        => $this->config->mail->to,
+                        //'cc'        => $this->config->mail->cc,
+                        'subject'   => 'Perbaharui Informasi: Ibu' . $name,
+                        'html'      => $template
+                    ));
+            }
+        }
 	}
 
 	public function downloadFormAction()
@@ -228,10 +270,10 @@ class LayananPelangganController extends ControllerBase
 
                 $template = $this->getTemplate('kotaksaran', array(
                     'name'				=> $name,
-                    'scp'				=> strtolower($this->request->getPost('feedback-scp', 'striptags')),
+                    'scp'				=> strtoupper($this->request->getPost('feedback-scp', 'striptags')),
                     'email'				=> strtolower($this->request->getPost('feedback-email', 'striptags')),
                     'phone'				=> strtoupper($this->request->getPost('feedback-contact-num', 'striptags')),
-                    'message'			=> strtoupper($this->request->getPost('feedback-message', 'striptags')),
+                    'message'			=> $this->request->getPost('feedback-message', 'striptags'),
                     'contactPreference'	=> strtoupper($contactPreference),
                 ));
 

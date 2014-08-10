@@ -8,44 +8,45 @@
 
 
 <p>Kepada Yth <strong>{{ name }}</strong>, Informasi terbaru Anda sudah diterima.</p>
-<p>Terima kasih telah mengirimkan informasi terbaru ini. Staff kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan hubungi {{ phoneFullTag }}.</p>
+<p>Terima kasih telah mengirimkan informasi terbaru ini. Staff kami akan mengontak Anda dengan segera. Apabila ada yang ingin ditanyakan lebih lanjut silahkan hubungi {{ phoneFullTag }} atau HP {{ mobileCall }}.</p>
 <br />
 <p>Terima kasih</p>
 <br />
 <p>Salam,<br />
-StemCord Indonesia</p>
+StemCord</p>
 		
-	<ul class="controls page_margin_top"><li><a href="#gallery-details-close">Return to Previous Page</a></li></ul></div></div></div></li>
+	<ul class="controls page_margin_top"><li><a href="{{ url('layanan-pelanggan/perbaharui-informasi-anda')}}">Kembali ke Halaman Sebelumnya</a></li></ul></div></div></div></li>
 	
 </ul>
 
 <div class="gallery-hide">
 
-<p>To update us on your change of address and contacts, please fill up the form below.</p>
+<p>Untuk memperbarui  perubahan alamat dan kontak Anda, silakan mengisi formulir di bawah ini.</p>
 
 <div class="wpcf7" id="wpcf7-f523-p524-o1">
 <div class="screen-reader-response"></div>
-<form action="/client-centre/update-personal-information/#wpcf7-f523-p524-o1" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
+<form action="{{ url('layanan-pelanggan/perbaharui-informasi-anda')}}" method="post" class="wpcf7-form wpcf7-acceptance-as-validation" novalidate="novalidate">
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="523" />
 <input type="hidden" name="_wpcf7_version" value="3.8.1" />
 <input type="hidden" name="_wpcf7_locale" value="" />
 <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f523-p524-o1" />
 <input type="hidden" name="_wpnonce" value="8e8293e6b7" />
+<input type="text" name="input-pot" value= "" />
 </div>
 <div class="contact_form">
-<div class="note">fields marked with * are mandatory</div>
+<div class="note">Bagian  yang ditandai dengan * wajib diisi</div>
 
 <div class="clearfix">
-<h3 class="box_header page_margin_top">Requestor</h3>
+<h3 class="box_header page_margin_top">Data Anda</h3>
 
 <fieldset class="left">
 
-	<label>SCP Number</label><div class="block">
+	<label>Nomor SCP</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-scp"><input type="text" name="update-scp" value="" size="8" maxlength="8" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span>
 	</div>
 	
-	<label>Mother's Name (as per contract) *</label><div class="block">
+	<label>Nama Ibu (sesuai kontrak/Agreement) *</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-mother-name"><input type="text" name="update-mother-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" id="update-mother-name" aria-required="true" aria-invalid="false" /></span>
 	</div>
 
@@ -53,7 +54,7 @@ StemCord Indonesia</p>
 
 <fieldset class="right">
 
-	<label>Mother's Identification Number *</label><div class="block">
+	<label>Nomor Identifikasi Ibu (KTP) *</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-mother-id-number"><input type="text" name="update-mother-id-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text_input" aria-required="true" aria-invalid="false" /></span>
 	</div>
 
@@ -61,17 +62,17 @@ StemCord Indonesia</p>
 
 </div>
 
-<h3 class="box_header page_margin_top">Update Information</h3>
-<p>Kindly fill in the information pairs that you would like to update</p>
+<h3 class="box_header page_margin_top">Informasi yang terbaru</h3>
+<p>Mohon mengisi  informasi yang perpasangan milik  Anda yang akan diperbaharui.</p>
 
 <div class="clearfix">
 <fieldset class="left">
-	<label>Current Mobile Number</label><div class="block">
+	<label>Nomor HP saat ini</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-current-mobile-num"><input type="text" name="update-current-mobile-num" value="" size="40" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span>
 	</div>
 </fieldset>
 <fieldset class="right">
-	<label>New Mobile Number</label><div class="block">
+	<label>Nomor HP yang baru</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-new-mobile-num"><input type="text" name="update-new-mobile-num" value="" size="40" class="wpcf7-form-control wpcf7-text text_input" aria-invalid="false" /></span>
 	</div>
 </fieldset>
@@ -79,12 +80,12 @@ StemCord Indonesia</p>
 
 <div class="clearfix">
 <fieldset class="left">
-	<label>Current Email Address</label><div class="block">
+	<label>Alamat Email saat ini</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-current-email-address"><input type="email" name="update-current-email-address" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email text_input" aria-invalid="false" /></span>
 	</div>
 </fieldset>
 <fieldset class="right">
-	<label>New Email Address</label><div class="block">
+	<label>Alamat Email baru</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-new-email-address"><input type="email" name="update-new-email-address" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email text_input" aria-invalid="false" /></span>
 	</div>
 </fieldset>
@@ -92,12 +93,12 @@ StemCord Indonesia</p>
 
 <div class="clearfix">
 <fieldset class="left">
-	<label>Current Mailing Address</label><div class="block">
+	<label>Alamat surat menyurat saat ini</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-current-mailing-address"><textarea name="update-current-mailing-address" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea text_input" aria-invalid="false"></textarea></span>
 	</div>
 </fieldset>
 <fieldset class="right">
-	<label>New Mailing Address</label><div class="block">
+	<label>Alamat surat menyurat yang baru</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-new-mailing-address"><textarea name="update-new-mailing-address" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea text_input" aria-invalid="false"></textarea></span>
 	</div>
 </fieldset>
@@ -105,23 +106,23 @@ StemCord Indonesia</p>
 
 <fieldset class="page_margin_top" style="clear:both;">
 
-	<label>Effective Date of Change *</label><div class="block">
+	<label>Tanggal Efektif Perubahan *</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-date-of-change"><input type="text" name="update-date-of-change" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required pick-date text_input" aria-required="true" aria-invalid="false" /></span>
 	</div>
 	
-	<label>Comments</label><div class="block">
+	<label>Komentar</label><div class="block">
 		<span class="wpcf7-form-control-wrap update-comments"><textarea name="update-comments" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea text_input" aria-invalid="false"></textarea></span>
 	</div>
 
 </fieldset>
 
-<p class="submit-consent">By submitting this form, I accept and agree to be included in StemCord’s mailing list, and to be contacted by StemCord and partners for future communications.<br>
-I prefer to be contacted by:
-<span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telephone" />&nbsp;<span class="wpcf7-list-item-label">Telephone</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
+<p class="submit-consent">Dengan mengirimkan formulir ini, saya menerima dan menyetujui untuk disertakan dalam StemCord milis, dan dihubungi oleh StemCord dan mitra untuk komunikasi  lebih lanjut.<br>
+Saya memilih untuk dihubungi dengan cara:
+<span class="wpcf7-form-control-wrap contact-by"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first"><input type="checkbox" name="contact-by[]" value="Telepon" />&nbsp;<span class="wpcf7-list-item-label">Telepon</span></span><span class="wpcf7-list-item last"><input type="checkbox" name="contact-by[]" value="SMS" />&nbsp;<span class="wpcf7-list-item-label">SMS</span></span></span></span></p>
 
 <p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit more blue" /></p>
 
 </div><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
 
 </div>
-		{% endblock %}
+{% endblock %}
