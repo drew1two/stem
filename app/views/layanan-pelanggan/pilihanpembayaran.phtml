@@ -1,24 +1,18 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
 <h2 class="box_header">Pilihan Pembayaran</h2>
-						<p>You can make use of the following convenient modes of payment for StemCord cord blood banking services.</p>
+<p>Anda dapat menentukan pilihan cara pembayaran yang nyaman  untuk layanan penyimpanan darah tali pusat StemCord.</p>
 
 <ul class="multiline-list clearfix">
 	<li class="icon_small_arrow right_lightblue">
-<span class="darkblue">AXS</span><br />
-Payment can be made via NETS at any AXS Stations islandwide. Simply select “Bills” – “Healthcare” – “StemCord Cord Blood Bank”. Visit <a href="http://www.axs.com.sg/" target="_blank" alt="AXS Payment">www.axs.com.sg</a> for more information.
+<span class="darkblue">Transfer Rupiah /SGD via BCA</span>
 	</li>
 	<li class="icon_small_arrow right_lightblue">
-<span class="darkblue">Credit Card Instalment Payment Plan</span><br />
-Take up our monthly instalment plans with various banks.
+<span class="darkblue">Cicilan 3 atau 6 bulan 0% dengan kartu kredit BCA</span>
 	</li>
 	<li class="icon_small_arrow right_lightblue">
-<span class="darkblue">Baby Bonus Scheme</span><br />
-Singaporeans may use the funds in your <a href="https://www.babybonus.gov.sg/bbss/html/index.html" target="_blank">Child Development Account (CDA)</a> for payments. 
-	</li>
-	<li class="icon_small_arrow right_lightblue">
-<span class="darkblue">By Cheque or Credit Card Payment</span><br />
-Simply complete your <a href="{{ url('layanan-pelanggan/download-form') }}">Credit Card Authorization Form</a> and <a href="{{ url('layanan-pelanggan/penyerahan-dokumen') }}">submit it online</a>. Alternatively, you can fax the form to {{ phoneFullTag }} or email it to {{ billingEmailFullTag }} for payment.
+<span class="darkblue">Kartu kredit</span><br />
+Cukup mengisi <a href="{{ url('layanan-pelanggan/download-form') }}">Formulir Otorisasi Kartu Kredit Anda</a> dan <a href="{{ url('layanan-pelanggan/penyerahan-dokumen') }}">mengirimkannya secara online</a>. Atau, Anda bisa fax formulir ke {{ phoneFullTag }} atau email ke {{ billingEmailFullTag }} untuk pembayaran
 	</li>
 </ul>									
 {% endblock %}
