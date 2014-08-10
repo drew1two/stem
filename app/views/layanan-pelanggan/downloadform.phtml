@@ -1,17 +1,15 @@
 {% extends "layouts/template.phtml" %}
 {% block content %}
-<h2 class="box_header">Downloadable Forms</h2>
-						<p>You will find the forms available for download by clicking directly on the link below.</p>
+<h2 class="box_header">Download Formulir</h2>
+<p>Anda akan menemukan formulir yang tersedia untuk di-download dengan mengklik langsung pada link di bawah ini.</p>
 
 <h3 class="page_margin_top">Forms</h3>
 <p>
-<a href="http://www.stemcord.com/forms/SC_CreditCardAuthorisationForm.pdf" target="_blank" title="Credit Card Payment Authorization Form">Credit Card Payment Authorization Form</a> (96KB)<br />
-<a href="http://www.stemcord.com/forms/ai1ocbc091013.pdf" target="_blank" title="GIRO Application for CDA with OCBC Bank">GIRO Application for CDA with OCBC Bank</a> (73KB)<br />
-<a href="http://www.stemcord.com/forms/ai1scb091013.pdf" target="_blank" title="GIRO Application for CDA with Standard Chartered Bank">GIRO Application for CDA with Standard Chartered Bank</a> (405KB)<br />
-<a href="http://www.stemcord.com/forms/StemCord_BillingInstructionAuthorizationLetter.pdf" target="_blank" title="Billing Instruction Authorization Letter">Billing Instruction Authorization Letter</a> (50KB)
+<a href="http://www.stemcord.com/forms/SC_CreditCardAuthorisationForm.pdf" target="_blank" title="Form Otorisasi Pembayaran Kartu Kredit">Form Otorisasi Pembayaran Kartu Kredit</a> (96KB)<br />
+<a href="http://www.stemcord.com/forms/StemCord_BillingInstructionAuthorizationLetter.pdf" target="_blank" title="Surat Kuasa Penagihan">Surat Kuasa Penagihan</a> (50KB)
 </p>
 
-<h3 class="page_margin_top">Submission of Forms</h3>
+<h3 class="page_margin_top">Penyerahan Formulir</h3>
 
-<p>Forms can be submitted by fax to {{ phoneFullTag }} or through online submission by clicking <a href="{{ url('layanan-pelanggan/penyerahan-dokumen') }}" title="Submission of Documents">here</a>.<br />
-You may submit your Re-Declaration of Medical Health History, Baby’s Birth Certificate, Adverse Event Letter or other documents.</p>					{% endblock %}
+<p>Formulir dapat diserahkan  melalui fax ke {{ phoneFullTag }} atau melalui pendaftaran online dengan mengklik <a href="{{ url('layanan-pelanggan/penyerahan-dokumen') }}" title="Penyerahan Dokumen">di sini</a>.<br />
+Anda dapat mengirimkan: Form Re-Deklarasi  Sejarah Kesehatan Medis, Akte Kelahiran bayi, Surat Adverse Event atau dokumen lainnya.</p>					{% endblock %}
