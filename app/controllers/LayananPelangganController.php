@@ -210,7 +210,43 @@ class LayananPelangganController extends ControllerBase
 
 	public function kotakSaranAction()
 	{
-		
+		$this->view->isSubmit = false;
+        if ($this->request->isPost()) {
+
+            $this->view->isSubmit = true;
+
+            $name = strtoupper($this->request->getPost('feedback-name', 'striptags'));
+
+            $this->view->name = $name;
+            
+            if ($this->request->getPost('input-pot') == '') {
+
+                $contactPreference = '';
+                if ($this->request->getPost('contact-by')) {
+                	$contactPreference = implode(', ', $this->request->getPost('contact-by'));
+                }
+
+                $template = $this->getTemplate('kotaksaran', array(
+                    'name'				=> $name,
+                    'scp'				=> strtolower($this->request->getPost('feedback-scp', 'striptags')),
+                    'email'				=> strtolower($this->request->getPost('feedback-email', 'striptags')),
+                    'phone'				=> strtoupper($this->request->getPost('feedback-contact-num', 'striptags')),
+                    'message'			=> strtoupper($this->request->getPost('feedback-message', 'striptags')),
+                    'contactPreference'	=> strtoupper($contactPreference),
+                ));
+
+                $mg = new Mailgun($this->config->mail->mailgunApiKey);
+                $domain = $this->config->mail->mailgunDomain;
+
+                $mg->sendMessage($domain, array(
+                        'from'      => $this->config->mail->from,
+                        'to'        => $this->config->mail->to,
+                        //'cc'        => $this->config->mail->cc,
+                        'subject'   => 'Kotak Saran: Ibu' . $name,
+                        'html'      => $template
+                    ));
+            }
+        }
 	}
 
 	/**
